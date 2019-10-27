@@ -2,6 +2,9 @@ import unittest
 from unittest.mock import patch
 from class_definitions import student as s
 
+"""
+Carl Phillips, tests for the student class
+"""
 
 class MyTestSet(unittest.TestCase):
     def setUp(self):
@@ -25,19 +28,19 @@ class MyTestSet(unittest.TestCase):
         self.assertEqual(a.__str__(), "Phillips, Carl has major CIS with gpa: 3.78")
 
     def test_object_not_create_error_last_name(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             a = s.Student()
 
     def test_object_not_created_error_first_name(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             a = s.Student()
 
     def test_object_not_create_error_major(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             a = s.Student()
 
     def test_object_not_create_error_gpa(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             a = s.Student()
 
 if __name__ == '__main__':
