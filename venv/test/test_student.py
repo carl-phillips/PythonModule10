@@ -20,6 +20,13 @@ class MyTestSet(unittest.TestCase):
         self.assertEqual(self.student.major, 'CIS')
         self.assertEqual(self.student.gpa, 3.78)
 
+    def test_student_str(self):
+        a = s.Student('Phillips', 'Carl', 'CIS', 3.78)
+        self.assertEqual(a.__str__(), "Phillips, Carl has major CIS with gpa: 3.78")
+
+    def test_object_not_create_error_last_name(self):
+        with self.assertRaises(ValueError):
+            a = s.Student()
 
 if __name__ == '__main__':
     unittest.main()
