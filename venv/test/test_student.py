@@ -28,5 +28,17 @@ class MyTestSet(unittest.TestCase):
         with self.assertRaises(ValueError):
             a = s.Student()
 
+    def test_object_not_created_error_first_name(self):
+        with self.assertRaises(ValueError):
+            a = s.Student()
+
+    def test_object_not_create_error_major(self):
+        with self.assertRaises(ValueError):
+            a = s.Student()
+
+    def test_object_not_create_error_gpa(self):
+        with self.assertRaises(ValueError):
+            a = s.Student()
+
 if __name__ == '__main__':
     unittest.main()
